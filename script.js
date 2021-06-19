@@ -12,9 +12,9 @@ function gridMaker(num,remove){
         a =document.createElement("div");
         container.appendChild(a);
         a.classList.add("grid");
-        grid(num);
-        hover();
-}}};
+       
+} grid(num);
+hover();}};
 
 function grid(boxes){
     let container=document.querySelector(".container");
@@ -50,6 +50,11 @@ reset.addEventListener("click", function(){
     //     key1.classList.remove("hover");
     gridMaker(num,"remove"); 
     
-    num=parseInt(prompt("enter number of cells in one row, maximum 100"));
+    num=parseInt(prompt("enter number between 1 and 100"));
+    if(0<num<100 ){
+        gridMaker(num,"add");
+    }   else{
+        num=parseInt(prompt("Invalid number! please enter number between 1 and 100"));
+    }
     gridMaker(num,"add");
 });
