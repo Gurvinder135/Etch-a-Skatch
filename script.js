@@ -1,20 +1,19 @@
 let num=16;
-gridMaker(num,"create");
+gridMaker(num);
 // to create divs
 
-function gridMaker(num,remove){
+function gridMaker(num){
     let container=document.querySelector(".container");
     
-        if(remove==="remove"){  
-        container.textContent="";
-    }   else{
-        for(i=0;i<(num*num);i++){
+    container.textContent="";
+        for(let i=0;i<(num*num);i++){
         a =document.createElement("div");
         container.appendChild(a);
         a.classList.add("grid");
-       
-} grid(num);
-hover();}};
+       } 
+       grid(num);
+        hover();
+        };
 
 function grid(boxes){
     let container=document.querySelector(".container");
@@ -46,15 +45,17 @@ return color;
 // reset button
 let reset= document.querySelector("button");
 reset.addEventListener("click", function(){
-    // key.forEach(key1=>{if(key1.classList.contains("hover")){
-    //     key1.classList.remove("hover");
-    gridMaker(num,"remove"); 
-    
+
     num=parseInt(prompt("enter number between 1 and 100"));
-    if(0<num<100 ){
-        gridMaker(num,"add");
+    let a=true;
+    while(a){
+    if(0<num && num<100 ){
+        gridMaker(num);
+        a=false;
+    
     }   else{
         num=parseInt(prompt("Invalid number! please enter number between 1 and 100"));
     }
-    gridMaker(num,"add");
+    }
+    
 });

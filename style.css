@@ -1,23 +1,33 @@
 *{
     box-sizing: border-box;
+
 }
 .grid{
-    border: 2px solid black;
+    border:1px solid rgb(65, 63, 63);
    
 }
 .container{
     display: grid;
     /* grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(16, 1fr); */
-    width: 480px;
-    height: 480px;
+    width: 30vw;
+    height: 30vw;
     margin: auto;
-    
+
 }
 .hover{
     /* background-color: #000000; */
 }
 button{
     display: block;
+    margin: 10px auto;
+    border-radius: 10px;
+    font-size: 18px;
+    font-family: 'Lucida Sans', sans-serif;
+    background-color: orange;
+    padding: 10px 10px;
+}
+h1{
+   text-align: center ;
     margin: auto;
 }
